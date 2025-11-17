@@ -30,7 +30,7 @@
         <?php
         define("PI", 3.141516);
         echo "valor de PI: " . PI . "<br>";
-<<<<<<< HEAD
+
         ?>
         <hr>
 
@@ -123,12 +123,9 @@
             echo "Valor de k: $k<br>";
             $k++;
         }
-=======
->>>>>>> 2c1944d15260aaca47401a6b7f1b574da131dbc0
+
         ?>
         <hr>
-
-<<<<<<< HEAD
         <hr>
 
         <?php
@@ -162,138 +159,6 @@
         echo "Fruta 2: " . $frutas[1] . "<br>";
         echo "Fruta 3: " . $frutas[2] . "<br>";
         
-=======
-        
-        <h2 style="color: red;">OPERADORES</h2>
-        <h2 style="color: red;">Ejemplo 1, hecho en clases</h2>
-        
-        <?php
-        $edad = 25;
-        $esEstudiante = true;
-        if ($edad > 18 && $esEstudiante) {
-            echo"Es mayor de edad y estudiante.";
-        }
-
-        echo '<h2 style="color: red;">Ejemplo 2</h2>';
-        // Operadores Lógicos
-        $edad = 20;
-        $tieneLicencia = true;
-        if ($edad >= 18 && $tieneLicencia) {
-            echo "Puede conducir<br>";
-        }
-        else{
-            echo "no pude conducir";
-        }
-
-        echo '<h2 style="color: red;">Ejemplo 3</h2>';
-        // Operadores de Asignación
-        $x = 10;
-        $x += 5;
-        echo "x vale: $x<br>";
-        ?>
-        <hr>
-
-        <?php
-        echo '<h2 style="color: orange;">CONTROL DE FLUJO</h2>';
-
-        echo '<h2 style="color: orange;">Ejemplo 1.Hecho en clases </h2>';
-
-        date_default_timezone_set('America/Lima');
-
-        $hora_actual = date("H:i");
-        $hora_limite = "11:15";
-
-        if ($hora_actual < $hora_limite) {
-            echo "salida";
-        } else {
-            echo "todavía en clases";
-        }
-
-        echo '<h2 style="color: orange;">Ejemplo 2</h2>';
-        // IF - ELSE
-        $nota = 9;
-        if ($nota >= 11) {
-            echo "Aprobado<br>";
-        } else {
-            echo "Desaprobado<br>";
-        }
-
-        echo '<h2 style="color: orange;">Ejemplo 3</h2>';
-        // SWITCH
-        $dia = "lunes";
-        switch ($dia) {
-            case "lunes":
-                echo "Inicio de semana<br>";
-                break;
-            case "miércoles":
-                echo "Mitad de semana<br>";
-                break;
-            default:
-                echo "Día cualquiera<br>";
-        }
-
-        ?>
-        <hr>
-
-        <?php
-
-        echo '<h2 style="color: green;">BUCLES</h2>';
-
-        echo '<h2 style="color: green;">Ejemplo 1</h2>';
-        // FOR
-        for ($i = 1; $i <= 5; $i++) {
-            echo "Iteración $i<br>";
-        }
-
-        echo '<h2 style="color: green;">Ejemplo 2</h2>';
-        // WHILE
-        $k = 0;
-        while ($k < 2) {
-            echo "Valor de k: $k<br>";
-            $k++;
-        }
-        ?>
-        <hr>
-
-        <?php
-        echo '<h2 style="color: blue;">FUNCIONES</h2>';
-
-        echo '<h2 style="color: blue;">Ejemplo 1</h2>';
-        // Función con Parámetros
-        function saludar($nombre)
-        {
-            echo "Hola, $nombre<br>";
-        }
-        saludar("Josue");
-
-        echo '<h2 style="color: blue;">Ejemplo 2</h2>';
-        // Función con Retorno
-        function multiplicar($a, $b)
-        {
-            return $a * $b;
-        }
-        echo "Multiplicación: " . multiplicar(5, 5) . "<br>";
-        ?>
-        <hr>
-
-        <?php
-        echo '<h2 style="color: purple;">ARREGLOS</h2>';
-
-        echo '<h2 style="color: purple;">Ejemplo 1</h2>';
-        // Arreglo Indexado
-        $frutas = ["manzana", "pera", "uva"];
-        echo "Fruta 1: " . $frutas[0] . "<br>";
-        echo "Fruta 2: " . $frutas[1] . "<br>";
-
->>>>>>> 2c1944d15260aaca47401a6b7f1b574da131dbc0
-        echo '<h2 style="color: purple;">Ejemplo 2</h2>';
-        // Arreglo Asociativo
-        $usuario = [
-            "nombre" => "Josue",
-            "correo" => "josue@example.com"
-        ];
-        echo "Nombre: " . $usuario["nombre"] . "<br>";
-        echo "Correo: " . $usuario["correo"] . "<br>";
         ?>
 </body>
 

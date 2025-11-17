@@ -18,14 +18,16 @@ if ($_SERVER["REQUEST_METHOD"] === 'POST') {
   $precio = $_POST["precio"];
   $descripcion = $_POST["descripcion"];
   $stock = $_POST["stock"];
+  $categoria = $_POST["id_categoria"];
+  $marca = $_POST["id_marca"];
 
   try {
     $stmt = $pdo->prepare(
       "UPDATE PRODUCTOS
-      SET nombre =?, descripcion = ?, precio= ?, stock=?, categoria=? marca=?
+      SET nombre =?, descripcion = ?, precio= ?, stock=?, id_categoria=? id_marca=?
       WHERE id_producto =?"
     );
-    $stmt->execute([$nombre, $descripcion, $precio, $stock, $id_categoria, $id_marca, $id_producto]);
+    $stmt->execute([$nombre, $descripcion, $precio, $stock, $categoria, $marca,]);
 
     echo"
     <script>
