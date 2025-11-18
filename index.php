@@ -15,7 +15,7 @@ $stmt = $pdo->query("SELECT
             INNER JOIN categorias c on p.id_categoria = c.id_categoria
             INNER JOIN marcas m on p.id_marca = m.id_marca
             order by 
-            p.id_producto desc
+            p.fecha_creacion desc
 ");
 $productos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 

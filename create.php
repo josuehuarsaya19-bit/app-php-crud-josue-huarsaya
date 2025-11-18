@@ -6,6 +6,7 @@ include 'includes/header.php';
 $stmt = $pdo->query('SELECT * FROM productos');
 $productos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+$creado_por_ = $_SESSION ['id_usuario'];
 $marcas = obtenerMarca($pdo);
 $categorias = obtenerCategoria($pdo);
 
@@ -19,12 +20,13 @@ if ($_SERVER["REQUEST_METHOD"] === 'POST') {
   $categoria = $_POST["id_categoria"];
   $marca = $_POST["id_marca"];
 
+
   try {
     $stmt = $pdo->prepare(
-      "INSERT INTO PRODUCTOS (nombre, descripcion, precio, stock, id_categoria, id_marca) 
-        VALUES (?,?,?,?,?,?)"
+      "INSERT INTO PRODUCTOS (nombre, descripcion, precio, stock, id_categoria, id_marca, creado_por) 
+        VALUES (?,?,?,?,?,?,?)"
     );
-    $stmt->execute([$nombre, $descripcion, $precio, $stock, $categoria, $marca]);
+    $stmt->execute([$nombre, $descripcion, $precio, $stock, $categoria, $marca, $creado_por_]);
 
     
     echo "
@@ -48,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] === 'POST') {
     </script>
     ";
   }
-  exit;
+  //exit;
 }
 ?>
 
